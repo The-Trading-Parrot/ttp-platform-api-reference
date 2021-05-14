@@ -21,17 +21,19 @@ GET
 
 Required request prameters:
 
-```bash
-client_id – The client ID making the request
-redirect_uri – The URL to redirect back to; this parameter must match the one you communicated when the OAuth2 client has been created
-response_type – Must be "code"
-```
+
+`client_id` – The client ID making the request
+`redirect_uri` – The URL to redirect back to; this parameter must match the one you communicated when the OAuth2 client has been created
+`response_type` – Must be `code`
+
 
 Response:
 
 ```bash
 code (string) – The authorization code.
 ```
+
+You can perform this request by implementing a "Login with thetradingparrot.com" link that will redirect the user to the TTP website.
 
 ### Step 2: Gaining an Access Token
 
@@ -46,13 +48,11 @@ POST
 
 Required request body parameters:
 
-```bash
-grant_type – Must be "authorization_code"
-code – The code previously returned from the authorization server
-client_id – Your client id
-client_secret – Your client secret
-redirect_uri – URL to redirect the user back to (matching the one used before to authorize)
-```
+`grant_type` – Must be `authorization_code`
+`code` – The code previously returned from the authorization server
+`client_id` – Your client id
+`client_secret` – Your client secret
+`redirect_uri` – URL to redirect the user back to (matching the one used before to authorize)
 
 Response:
 
