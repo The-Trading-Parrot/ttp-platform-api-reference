@@ -70,6 +70,21 @@ Response:
 
 You can now use the `access_token` returned above to authenticate all API requests using the HTTP bearer authentication, by passing the `Authorization: Bearer <access_token>` in the request headers.
 
+## Me Endpoint
+
+Some no-code providers require to specify a `me` endpoint to retrieve user data.
+
+```bash
+GET
+/oauth/me
+```
+
+Required parameters:
+
+```
+`access_token`: the previous retrieved access token
+```
+
 ## Refresh token
 
 You can refresh the user access_token by invoking:
