@@ -1,6 +1,6 @@
 # Authentication
 
-Your client will ask the user to authenticate himself through the TTP website (thetradingparrot.com) by using the OAuth2 _Authorization Code_ grant type.
+Your client will ask the user to authenticate himself through the TTP website (thetradingparrot.com) by using either the OAuth2 _Authorization Code_ grant type.
 
 You will ask your user to `Login with thetradingparrot.com`, obtaing the access token and use that to authenticate your API requests. The details are explained in this document.
 
@@ -76,7 +76,7 @@ Some no-code providers require to specify a `me` endpoint to retrieve user data.
 
 ```bash
 GET
-/oauth/me
+/oauth?me
 ```
 
 Required parameters:
@@ -112,3 +112,9 @@ Response:
     "request_token": "khaskdjhkhasdnaiwbwsh123"
 }
 ```
+
+## No-Code platform
+
+If you're working with a no-code platform such as bubble.io, please use an API Connector plugin configured as below:
+
+![Bubble.io OAuth2 Flow Example](bubble-io-settings.png)
